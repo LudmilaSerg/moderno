@@ -113,6 +113,21 @@
     }
 }
 
+.products__bottom-btn {
+    text-align: center;
+    button {
+        margin-top: 45px;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 0.5px 0.866px 3px 0px rgba(204, 216, 228, 0.75);
+        border: none;
+        background-color: #fff;
+        color: $bg;
+        padding: 20px 30px;
+        cursor: pointer;
+    }
+}
+
 // end search
 // start produtcs
 .products {
@@ -136,12 +151,24 @@
         &+button {
             margin-left: 5px;
         }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
     }
+}
+
+.products__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .product__item {
     max-width: 442px;
     width: 100%;
+    box-shadow: 0px 1px 2px 0ox rgba(205, 214, 222, 0.75);
+    margin-bottom: 30px;
     &-img {
         min-height: 250px;
         background-repeat: no-repeat;
@@ -156,6 +183,7 @@
         align-items: center;
         min-height: 90px;
         font-weight: 500;
+        border-bottom: 1px solid #e7ecf2;
     }
     &-name {
         max-width: 310px;
@@ -173,6 +201,47 @@
     &-price {
         font-size: 20px;
         color: $bg;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+        padding: 10px 30px;
+    }
+    &-author {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-position: center;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 14px;
+        }
+    }
+}
+
+.products__bottom-btn {
+    text-align: center;
+    margin-bottom: 60px;
+    button {
+        padding: 12px 21px;
+        border: none;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
     }
 }
 
