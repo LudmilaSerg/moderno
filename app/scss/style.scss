@@ -916,6 +916,32 @@ button.icon-unsorted {
 
 .product__item-list {
     display: none;
+    .icon-comment-o,
+    .icon-heart-o {
+        display: inline-block;
+        font-size: 12px;
+        color: #70838d;
+        padding-left: 50px;
+        border-left: 1px solid #aeb4bb;
+        position: relative;
+        span {
+            color: $bg;
+            @include f500;
+        }
+        &::before {
+            font-size: 16px;
+            color: $green;
+            position: absolute;
+            left: 20px;
+            top: 0px;
+        }
+    }
+    .icon-comment-o {
+        padding-right: 30px;
+        &::before {
+            top: -2px;
+        }
+    }
 }
 
 .product-page__items {
@@ -951,6 +977,10 @@ button.icon-unsorted {
             }
             .product__item-list {
                 display: block;
+            }
+            .product__item-star {
+                margin-left: auto;
+                margin-right: 30px;
             }
         }
     }
